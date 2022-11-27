@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_settings"
+    app:startDestination="@id/fragment_Setting_One">
+
+    <action
+        android:id="@+id/action_fragment_Setting_Three_to_fragment_Setting_Two"
+        app:destination="@id/fragment_Setting_Two" />
+    <fragment
+        android:id="@+id/fragment_Setting_One"
+        android:name="com.gwsilver.prakticheskaya_rabota_8.Fragment_Setting_One"
+        android:label="Fragment_Setting_One">
+        <action
+            android:id="@+id/action_fragment_Setting_One_to_fragment_Setting_Two"
+            app:destination="@id/fragment_Setting_Two" />
+        <action
+            android:id="@+id/action_fragment_Setting_One_to_fragment_One"
+            app:destination="@id/fragment_One" />
+    </fragment>
+    <action
+        android:id="@+id/action_fragment_Setting_One_to_fragment_Setting_Two"
+        app:destination="@id/fragment_Setting_Two" />
+    <fragment
+        android:id="@+id/fragment_Setting_Two"
+        android:name="com.gwsilver.prakticheskaya_rabota_8.Fragment_Setting_Two"
+        android:label="Fragment_Setting_Two">
+
+        <action
+            android:id="@+id/action_fragment_Setting_Two_to_fragment_Setting_Three"
+            app:destination="@id/fragment_Setting_Three" />
+        <action
+            android:id="@+id/action_fragment_Setting_Two_to_fragment_Setting_One"
+            app:destination="@id/fragment_Setting_One" />
+    </fragment>
+    <action
+        android:id="@+id/action_fragment_Setting_Two_to_fragment_Setting_One"
+        app:destination="@id/fragment_Setting_One" />
+    <action
+        android:id="@+id/action_fragment_Setting_One_to_fragment_One"
+        app:destination="@id/fragment_One" />
+    <action
+        android:id="@+id/action_fragment_Setting_Two_to_fragment_Setting_Three"
+        app:destination="@id/fragment_Setting_Three" />
+    <fragment
+        android:id="@+id/fragment_Setting_Three"
+        android:name="com.gwsilver.prakticheskaya_rabota_8.Fragment_Setting_Three"
+        android:label="Fragment_Setting_Three">
+        <action
+            android:id="@+id/action_fragment_Setting_Three_to_fragment_Setting_Two"
+            app:destination="@id/fragment_Setting_Two" />
+    </fragment>
+</navigation>
